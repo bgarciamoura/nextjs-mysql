@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (_context) => {
     const users = await fetch(`${process.env.base_api_url}/users`).then((response) => response.json());
 
     return {
